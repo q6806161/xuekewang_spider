@@ -38,7 +38,8 @@ class SpiderXueKeWang(object):
                            "高中":[self.courses_lst_high,self.sources_kinds_middle_high]
                           }
         self.s = requests.Session()
-        self.__API = """http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?spiderId=3c44943c2dfa4a80b709090f6e4f7f9f&orderno=YZ2019313213eeDYdo&returnType=2&count=4"""
+        # 麻烦放入你自己的付费代理
+        self.__API = API
         self.time = 1
         self.duration = 1000  # millisecond
         self.freq = 440  # Hz
