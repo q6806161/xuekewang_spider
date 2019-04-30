@@ -136,11 +136,11 @@ class SpiderXueKeWang(object):
 # 数据解析
     def run(self):
         for grade,courses_sources in self.grades_dict.items():
-            page = 1
             for course_chn,course_en in courses_sources[0].items():
                 for kind,source_type in courses_sources[1].items():
                     filepath = f"E:\学科网\{grade}\{course_chn}\{kind}"
                     self.mike_dir_file_box(filepath)
+                    page = 1
                     page_max = self.top_page_get(self.url_parse(grade,course_en,source_type,page))
                     print(f"正在爬取{grade}-{course_chn}-{kind},最大页数为：{page_max}")
                     while True:
